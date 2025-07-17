@@ -1,0 +1,2 @@
+C:/Users/Val/Code/C and C++/Rustlike-patterns-for-Cpp/build/CMakeFiles/edit_cache.dir
+C:/Users/Val/Code/C and C++/Rustlike-patterns-for-Cpp/build/CMakeFiles/rebuild_cache.dir
