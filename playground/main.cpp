@@ -1,15 +1,23 @@
 #include <iostream>
+// Here
+#include <isvar.h>
 
-#include "../src/ris/ris.h"
+struct test {
+    int x;
+
+    int getX() const {
+        return x;
+    }
+};
 
 int main() {
-    std::variant<int, float> var = 42.f;
+    std::variant<int, test> var = test{42};
 
     is(var, int) {
         std::cout << "Variant holds an int: " << var << std::endl;
     }
-    is(var, float) {
-        std::cout << "Variant holds an float: " << var << std::endl;
+    is(var, test) {
+        std::cout << "Variant holds a test: " << var.getX() << std::endl;
     }
 
 #ifdef RIS_VERBOSE_NAMING
