@@ -1,2 +1,2 @@
-# Rustlike-patterns-for-Cpp
-Pattern matching for C++ utilising std::variant
+# isvar
+Pattern matching library for C++ utilising std::variant
