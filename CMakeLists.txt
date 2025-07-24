@@ -17,7 +17,7 @@ target_sources(${PROJECT_NAME} INTERFACE
 )
 
 # Configure
-if(ISVAR_VERBOSE_NAMING) # usage set(ISVAR_VERBOSE_NAMING ON/OFF)
+if(ISVAR_VERBOSE_NAMING)
     target_compile_definitions(${PROJECT_NAME} INTERFACE ISVAR_VERBOSE_NAMING)
 endif()
 
