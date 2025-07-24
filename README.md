@@ -1,6 +1,6 @@
 # isvar
 
-C++ pattern matching for std::variant.
+C++ pattern matching library for std::variant.
 
 ## Usage
 
