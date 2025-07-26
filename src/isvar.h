@@ -1,19 +1,11 @@
 #pragma once
 
-#include <utility>
 #include <variant>
 
-namespace isvar {
-
-template <typename Type> std::pair<bool, Type> unpack(auto &variant) {
-  bool holds = std::holds_alternative<Type>(variant);
-  return {holds, holds ? std::get<Type>(variant) : Type{}};
-}
-
-} // namespace isvar
-
 #define ISVAR_INTERNAL_IS(variant, type)                                       \
-  if (auto [holds, variant] = isvar::unpack<type>(variant); holds)
+  if (bool ISVAR_HOLDS = std::holds_alternative<type>(variant); ISVAR_HOLDS)   \
+    if (auto ISVAR_VARIANT = variant; true)                                    \
+      if (auto variant = std::get<type>(ISVAR_VARIANT); true)
 
 #ifdef ISVAR_VERBOSE_NAMING
 #define IS_VAR(variant, type) ISVAR_INTERNAL_IS(variant, type)
